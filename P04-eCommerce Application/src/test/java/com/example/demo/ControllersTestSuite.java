@@ -1,5 +1,6 @@
-package com.example.demo.controllers;
+package com.example.demo;
 
+import com.example.demo.controllers.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -7,9 +8,10 @@ import org.junit.runners.Suite;
 
 @Suite.SuiteClasses({
         CartControllerTest.class,
-        LoginControllerTest.class,
         OrderControllerTest.class,
-        UserControllerTest.class
+        UserControllerTest.class,
+        ItemControllerTest.class,
+        LoginControllerTest.class
 })
 
 public class ControllersTestSuite {

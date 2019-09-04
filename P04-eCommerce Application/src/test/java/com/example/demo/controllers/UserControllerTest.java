@@ -57,13 +57,24 @@ public class UserControllerTest {
     }
 
     @Test
-    public void invalidPassword() {
-        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
-        when(encoder.encode("invTestPassword")).thenReturn("thisIsHashedOfInv");
+    public void invalidConfirmPassword() {
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("test");
         request.setPassword("testPassword");
         request.setConfirmPassword("invTestPassword");
+
+        final ResponseEntity<User> response = userController.createUser(request);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void passwordTooShort() {
+        CreateUserRequest request = new CreateUserRequest();
+        request.setUsername("test");
+        request.setPassword("pwd");
+        request.setConfirmPassword("pwd");
 
         final ResponseEntity<User> response = userController.createUser(request);
 
@@ -86,14 +97,6 @@ public class UserControllerTest {
         ResponseEntity<User> user = userController.findByUserName("non existing user");
         assertEquals(HttpStatus.NOT_FOUND, user.getStatusCode());
     }
-
-    /*
-    @GetMapping("/{username}")
-	public ResponseEntity<User> findByUserName(@PathVariable String username) {
-		User user = userRepository.findByUsername(username);
-		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
-	}
-     */
 
 
 }

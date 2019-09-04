@@ -56,6 +56,7 @@ public class CartControllerTest {
 
         //create cart and link it to the user
         cart = new Cart();
+        cart.setId(1L);
         cart.setUser(user);
         user.setCart(cart);
     }

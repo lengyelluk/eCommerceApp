@@ -72,7 +72,9 @@ public class OrderControllerTest {
         assertEquals(HttpStatus.OK, res.getStatusCode());
         assertEquals("test item", res.getBody().getItems().get(0).getName());
         assertEquals("test desc", res.getBody().getItems().get(0).getDescription());
+        assertEquals("test user", res.getBody().getUser().getUsername());
         assertTrue(new BigDecimal(100).equals(res.getBody().getItems().get(0).getPrice()));
+        assertTrue(new BigDecimal(100).equals(res.getBody().getTotal()));
     }
 
     @Test
