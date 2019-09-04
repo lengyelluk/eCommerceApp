@@ -16,6 +16,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import static com.example.demo.security.SecurityConstants.LOGIN_URL;
 import static com.example.demo.security.SecurityConstants.SIGN_UP_URL;
 
+//credit goes to Bruno Krebs (https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/)
+
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 

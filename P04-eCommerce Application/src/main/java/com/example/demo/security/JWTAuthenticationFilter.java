@@ -21,6 +21,8 @@ import java.util.Date;
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 import static com.example.demo.security.SecurityConstants.*;
 
+//credit goes to Bruno Krebs (https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/)
+
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private AuthenticationManager authenticationManager;

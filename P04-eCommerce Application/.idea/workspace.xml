@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcf01442-a7cb-4585-8b7c-c82957701eed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ControllersTestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +33,7 @@
   <component name="CoverageViewManager">
     <option name="myFlattenPackages" value="true" />
     <option name="myAutoScrollFromSource" value="true" />
-    <option name="myElementSize" value="501" />
+    <option name="myElementSize" value="521" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+            <state relative-caret-position="469">
+              <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="506">
+              <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -93,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ControllersTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="210">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +105,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="71">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,12 +172,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/SareetaApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/security/SecurityConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/repositories/UserRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/CartControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/OrderControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/LoginControllerTest.java" />
@@ -183,13 +184,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demo/security/WebSecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ControllersTestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
+    <option name="x" value="993" />
     <option name="y" value="25" />
-    <option name="width" value="801" />
+    <option name="width" value="927" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -336,7 +339,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567592823038" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567612957554" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projects/JDND/exercises/c4 - testing/starter code" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.5" />
@@ -455,18 +458,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CartControllerTest_givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty - 2019.09.04 at 10h 27m 11s.xml">
-      <configuration name="CartControllerTest.givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartControllerTest_givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty - 2019.09.04 at 10h 29m 16s.xml">
-      <configuration name="CartControllerTest.givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartControllerTest_givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty - 2019.09.04 at 10h 29m 48s.xml">
-      <configuration name="CartControllerTest.givenUserWithItemInCart_whenItemIsRemovedFromCart_thenCartIsEmpty" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartControllerTest - 2019.09.04 at 10h 32m 13s.xml">
-      <configuration name="CartControllerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OrderControllerTest - 2019.09.04 at 10h 42m 25s.xml">
       <configuration name="OrderControllerTest" configurationId="JUnit" />
     </history-entry>
@@ -485,9 +476,21 @@
     <history-entry file="ControllersTestSuite - 2019.09.04 at 12h 21m 04s.xml">
       <configuration name="ControllersTestSuite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserControllerTest_findByNameTest - 2019.09.04 at 12h 25m 27s.xml">
+      <configuration name="UserControllerTest.findByNameTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerTest_findByNameNegativeTest - 2019.09.04 at 12h 26m 25s.xml">
+      <configuration name="UserControllerTest.findByNameNegativeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllersTestSuite - 2019.09.04 at 12h 26m 32s.xml">
+      <configuration name="ControllersTestSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllersTestSuite - 2019.09.04 at 12h 27m 05s.xml">
+      <configuration name="ControllersTestSuite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="993" y="25" width="927" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -497,18 +500,18 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2877698" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28717366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="GraphQL" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Educational.CheckDetails" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Messages" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -518,7 +521,7 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.39679027" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.46319866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24958494" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -938,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/repositories/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -952,30 +948,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="469">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ControllersTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+        <state relative-caret-position="71">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="54" column="82" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
         </state>
       </provider>
     </entry>

@@ -52,23 +52,27 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		//logging added
-		log.info("user name set with " + createUserRequest.getUsername());
+		log.info("User creation step. User name set as " + createUserRequest.getUsername());
 
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
 
 		//password check
-		if(createUserRequest.getPassword().length() < 7 ||
-			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			System.err.printf("Error with user password. Cannot create user {}", createUserRequest.getUsername());
+		if(createUserRequest.getPassword().length() < 7) {
+			log.info("Create user fail! Password length is {} and it is shorter than 7 characters", createUserRequest.getPassword().length());
+			return ResponseEntity.badRequest().build();
+		}
+
+		if(!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+			log.info("Create user fail! Confirm password does not match password");
 			return ResponseEntity.badRequest().build();
 		}
 		//encode passwod
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
-
 		userRepository.save(user);
+		log.info("Create user success. User {} was created", user.getUsername());
+
 		return ResponseEntity.ok(user);
 	}
 

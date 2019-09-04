@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 import static com.example.demo.security.SecurityConstants.*;
 
+//credit goes to Bruno Krebs (https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/)
+
 @Component
 public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilter {
 
