@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -69,6 +70,30 @@ public class UserControllerTest {
         assertNotNull(response);
         assertEquals(400, response.getStatusCodeValue());
     }
+
+    @Test
+    public void findByNameTest() {
+        User user = new User();
+        user.setUsername("test name");
+        when(userRepoMock.findByUsername("test name")).thenReturn(user);
+        ResponseEntity<User> res = userController.findByUserName("test name");
+        assertNotNull(res);
+        assertEquals(HttpStatus.OK, res.getStatusCode());
+    }
+
+    @Test
+    public void findByNameNegativeTest() {
+        ResponseEntity<User> user = userController.findByUserName("non existing user");
+        assertEquals(HttpStatus.NOT_FOUND, user.getStatusCode());
+    }
+
+    /*
+    @GetMapping("/{username}")
+	public ResponseEntity<User> findByUserName(@PathVariable String username) {
+		User user = userRepository.findByUsername(username);
+		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
+	}
+     */
 
 
 }
