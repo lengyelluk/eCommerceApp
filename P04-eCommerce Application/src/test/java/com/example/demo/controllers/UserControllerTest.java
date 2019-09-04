@@ -7,8 +7,12 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,12 +21,10 @@ import static org.mockito.Mockito.when;
 
 public class UserControllerTest {
 
+
     private UserController userController;
-
     private UserRepository userRepoMock = mock(UserRepository.class);
-
     private CartRepository cartRepoMock = mock(CartRepository.class);
-
     private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
 
     @Before
@@ -31,12 +33,11 @@ public class UserControllerTest {
         TestUtils.injectObjects(userController, "userRepository", userRepoMock);
         TestUtils.injectObjects(userController, "cartRepository", cartRepoMock);
         TestUtils.injectObjects(userController, "bCryptPasswordEncoder", encoder);
-
     }
 
     @Test
-    public void create_user_happy_path() throws Exception {
-        when(encoder.encode("testtest")).thenReturn("thisIsHashed");
+    public void givenCustomer_whenHeRegistersWithValidPwd_thenUserDataIsPersisted() throws Exception {
+        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("test");
         request.setPassword("testPassword");
@@ -51,7 +52,23 @@ public class UserControllerTest {
         assertNotNull(user);
         assertEquals(0, user.getId());
         assertEquals("test", user.getUsername());
-        assertEquals("testPassword", user.getPassword());
+        assertEquals("thisIsHashed", user.getPassword());
     }
+
+    @Test
+    public void invalidPassword() {
+        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
+        when(encoder.encode("invTestPassword")).thenReturn("thisIsHashedOfInv");
+        CreateUserRequest request = new CreateUserRequest();
+        request.setUsername("test");
+        request.setPassword("testPassword");
+        request.setConfirmPassword("invTestPassword");
+
+        final ResponseEntity<User> response = userController.createUser(request);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
+
 
 }
