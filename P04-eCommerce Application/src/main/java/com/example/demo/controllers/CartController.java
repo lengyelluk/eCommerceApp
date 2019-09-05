@@ -40,12 +40,12 @@ public class CartController {
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			log.info("Add to cart fail! User with username {} does not exist", request.getUsername());
+			log.info("fail=add_to_cart. User: {} does not exist", request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.info("Add to cart fail! Item with item id {} does not exist", request.getItemId());
+			log.info("fail=add_to_cart. Item_id: {} does not exist", request.getItemId());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
@@ -59,12 +59,12 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			log.info("Remove from cart fail! User with username {} does not exist", request.getUsername());
+			log.info("fail=remove_from_cart. User: {} does not exist", request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.info("Remove from cart fail! Item with item id {} does not exist", request.getItemId());
+			log.info("fail=remove_from_cart. ItemId: {} does not exist", request.getItemId());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
