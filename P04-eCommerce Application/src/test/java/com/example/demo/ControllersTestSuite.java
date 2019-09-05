@@ -6,6 +6,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 
+//all classes with unit tests
 @Suite.SuiteClasses({
         CartControllerTest.class,
         OrderControllerTest.class,

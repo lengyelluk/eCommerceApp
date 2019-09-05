@@ -60,18 +60,18 @@ public class UserController {
 
 		//password check
 		if(createUserRequest.getPassword().length() < 7) {
-			log.info("Create user fail! Password length is {} and it is shorter than 7 characters", createUserRequest.getPassword().length());
+			log.info("fail=create_user! Password length: {} is too short", createUserRequest.getPassword().length());
 			return ResponseEntity.badRequest().build();
 		}
 
 		if(!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			log.info("Create user fail! Confirm password does not match password");
+			log.info("fail=create_user! Confirm password does not match password");
 			return ResponseEntity.badRequest().build();
 		}
 		//encode passwod
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
-		log.info("Create user success. User {} was created", user.getUsername());
+		log.info("success=create_user. User: {} was created", user.getUsername());
 
 		return ResponseEntity.ok(user);
 	}
